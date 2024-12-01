@@ -57,3 +57,5 @@ artifacts/
 # Other Cache and Temp Files
 *.cache
 *.tmp
+
+*.sln
