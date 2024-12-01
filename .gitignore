@@ -1,0 +1,59 @@
+# Build Folders
+bin/
+obj/
+
+# Visual Studio specific
+.vs/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Backup and crash files
+*.bak
+*.swp
+*.pdb
+
+# Build results
+*.dll
+*.exe
+*.app
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Rider specific
+.idea/
+*.iml
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+project.lock.json
+
+# Logs
+*.log
+
+# Coverage results
+coverage/
+*.coverage
+*.coveragexml
+
+# JetBrains Rider project files
+.idea/
+
+# DotNet specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Other Cache and Temp Files
+*.cache
+*.tmp
