@@ -16,15 +16,34 @@ public class Program
 
     private static void RunTest(in int[] left, in int[] right, int expected_dist)
     {
-        int found = Dist(left, right);
+        int? found = Dist(left, right);
         if(found != expected_dist)
         {
             throw new Exception("Failed test");
         }
     }
 
-    public static int Dist(in int[] left, in int[] right)
+    public static int? Dist(in int[] left, in int[] right)
     {
-        return -1;
+        int? left_smallest = FindSmallestNumber(left);
+        int? right_smallest = FindSmallestNumber(right);
+
+        if(left_smallest == null || right_smallest == null)
+        {
+            return null;
+        }
+
+        var curr_dist = (left_smallest > right_smallest) ? left_smallest - right_smallest : right_smallest - left_smallest;
+
+        var left_mutable = left.ToList();
+        var right_mutable = right.ToList();
+
+        left_mutable.Remove(left_smallest);
+    }
+
+    private static bool FindSmallestNumber(int[] array, out int smallest)
+    {
+        var smallest = array.Where(x => array.Where(y => x > y).Any());
+        return smallest.Any();
     }
 }
